@@ -89,15 +89,15 @@
   right: 14px;
   height: 2px;
   border-radius: 2px;
-  background: var(--color-jade);
+  background: var(--color-primary);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navLink:hover {
-  color: var(--color-jade);
-  background: rgba(27, 127, 121, 0.06);
+  color: var(--color-primary);
+  background: rgba(8, 145, 178, 0.06);
 }
 
 .navLink:hover::after {
@@ -105,7 +105,7 @@
 }
 
 .navLink:focus-visible {
-  outline: 2px solid var(--color-jade);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: 10px;
 }
@@ -114,8 +114,20 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   flex-shrink: 0;
+}
+
+.phoneLink {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-charcoal);
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.phoneLink:hover {
+  color: var(--color-primary);
 }
 
 /* ── Burger button (mobile) ──────────────────────────── */
@@ -136,7 +148,7 @@
 }
 
 .burger:hover {
-  background: rgba(27, 127, 121, 0.08);
+  background: rgba(8, 145, 178, 0.08);
 }
 
 .burger span {
@@ -207,8 +219,8 @@
 }
 
 .mobileNavLink:hover {
-  background: rgba(27, 127, 121, 0.08);
-  color: var(--color-jade);
+  background: rgba(8, 145, 178, 0.08);
+  color: var(--color-primary);
 }
 
 .mobileActions {

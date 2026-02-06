@@ -24,7 +24,7 @@
 }
 
 .item summary:hover {
-  color: var(--color-jade);
+  color: var(--color-primary);
 }
 
 .item p {
@@ -33,6 +33,6 @@
 }
 
 .item[open] {
-  border-color: rgba(26, 138, 125, 0.35);
-  box-shadow: 0 2px 8px rgba(26, 138, 125, 0.06), 0 8px 20px rgba(26, 138, 125, 0.08);
+  border-color: rgba(8, 145, 178, 0.35);
+  box-shadow: 0 2px 8px rgba(8, 145, 178, 0.06), 0 8px 20px rgba(8, 145, 178, 0.08);
 }

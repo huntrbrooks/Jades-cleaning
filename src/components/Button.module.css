@@ -26,20 +26,20 @@
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--color-jade);
+  outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
 
 /* ── Variants ──────────────────────────────────── */
 .primary {
-  background: var(--color-jade);
+  background: var(--color-primary);
   color: var(--color-white);
-  box-shadow: 0 2px 8px rgba(26, 138, 125, 0.2);
+  box-shadow: 0 2px 8px rgba(8, 145, 178, 0.2);
 }
 
 .primary:hover {
-  background: var(--color-jade-dark);
-  box-shadow: 0 6px 20px rgba(26, 138, 125, 0.3);
+  background: var(--color-primary-dark);
+  box-shadow: 0 6px 20px rgba(8, 145, 178, 0.3);
 }
 
 .secondary {
@@ -60,20 +60,20 @@
 }
 
 .outline:hover {
-  border-color: var(--color-jade);
-  color: var(--color-jade);
-  background: rgba(26, 138, 125, 0.04);
-  box-shadow: 0 4px 16px rgba(26, 138, 125, 0.1);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(8, 145, 178, 0.04);
+  box-shadow: 0 4px 16px rgba(8, 145, 178, 0.1);
 }
 
 .ghost {
-  background: var(--color-jade-light);
-  color: var(--color-jade);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
 }
 
 .ghost:hover {
-  background: rgba(26, 138, 125, 0.16);
-  box-shadow: 0 4px 16px rgba(26, 138, 125, 0.12);
+  background: rgba(8, 145, 178, 0.16);
+  box-shadow: 0 4px 16px rgba(8, 145, 178, 0.12);
 }
 
 /* ── Sizes ─────────────────────────────────────── */

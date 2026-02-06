@@ -609,3 +609,144 @@ export const valueProps = [
 ];
 
 export const beforeAfterPreview = galleryItems.slice(0, 6);
+
+/* ── New sections for homepage redesign ─────────────────── */
+
+export type PromoData = {
+  headline: string;
+  description: string;
+  ctaLabel: string;
+  ctaHref: string;
+};
+
+export type FounderData = {
+  name: string;
+  heading: string;
+  bio: string[];
+  image: string;
+};
+
+export type StatMetric = {
+  value: string;
+  label: string;
+  description: string;
+};
+
+export type ReferralData = {
+  headline: string;
+  description: string;
+  amount: string;
+  perPerson: string;
+};
+
+export type ValuePropItem = {
+  title: string;
+  description: string;
+  ctaLabel: string;
+  ctaHref: string;
+};
+
+export const promoData: PromoData = {
+  headline: "New Client Special - Get 15% Off Your First Reset",
+  description:
+    "First time booking with Total Reset Services? Enjoy 15% off any package. Use code FIRSTRESET at checkout or mention it when you book your consult.",
+  ctaLabel: "Claim Your Discount",
+  ctaHref: siteConfig.links.booking,
+};
+
+export const founderData: FounderData = {
+  name: "Jade",
+  heading: "Hi. I'm Jade.",
+  bio: [
+    "I started Total Reset Services because I know what it feels like when your home is out of control. After years of helping friends and family dig out from under the mess, I realised this was my calling — turning chaos into calm, one room at a time.",
+    "Total Reset was built with a single objective — to give busy people their space back without judgment. We combine deep cleaning with real organisation systems so the calm actually sticks. Every reset is personal, and every client leaves with a home that finally works for them.",
+  ],
+  image: "/images/jade-founder.jpg",
+};
+
+export const statMetrics: StatMetric[] = [
+  {
+    value: "96%",
+    label: "Spotless Results, Every Time",
+    description:
+      "Our clients are thrilled with their resets. With high expectations across Melbourne, we consistently deliver the calm our clients know and trust.",
+  },
+  {
+    value: "96.5%",
+    label: "Reliable Service",
+    description:
+      "With a 96.5% success rate, our seamless processes ensure your reset stays on schedule — dependable, efficient, and hassle-free.",
+  },
+  {
+    value: "97.5%",
+    label: "Professionalism You Can Trust",
+    description:
+      "97.5% of resets are carried out with complete professionalism, following our trusted policies and procedures. Your space is in reliable, respectful hands every time.",
+  },
+];
+
+export const referralData: ReferralData = {
+  headline: "$100 Referral Bonus",
+  description:
+    "Share the calm. Refer a friend or family member and you both receive $50 off your next reset. Sign in to your account to find your unique referral code.",
+  amount: "$100",
+  perPerson: "$50 each",
+};
+
+export const homepageValueProps: ValuePropItem[] = [
+  {
+    title: "Transparent Pricing",
+    description:
+      "Take back control of your budget. Choose what suits you best — a time-based hourly rate or a results-based flat rate package. No hidden fees, no surprises.",
+    ctaLabel: "See Pricing",
+    ctaHref: "/packages",
+  },
+  {
+    title: "Book Your Reset in 60 Seconds",
+    description:
+      "Our streamlined booking system makes your life a breeze. Just click Book Now and we'll take it from there. Need an urgent reset? Just call. We're here for you.",
+    ctaLabel: "Book Now",
+    ctaHref: siteConfig.links.booking,
+  },
+  {
+    title: "We Only Hire the Best",
+    description:
+      "Our premium Melbourne reset teams are at the top of their game and they genuinely love what they do. If you're not completely satisfied, check out our 100% satisfaction guarantee.",
+    ctaLabel: "Our Approach",
+    ctaHref: "/about",
+  },
+];
+
+export const trustBadges = [
+  "100% Satisfaction Guarantee",
+  "Fully Insured",
+  "5-Star Rated",
+  "Local & Trusted",
+];
+
+export const guaranteeData = {
+  headline: "100% Satisfaction Guarantee",
+  description:
+    "If you're not happy enough to recommend us to your friends, let us know and we'll send a team out to make it right. That's how we roll.",
+  note: "T&Cs apply - Please see your booking confirmation for more info.",
+};
+
+export const serviceForGrid = [
+  ...services.slice(0, 5),
+  {
+    id: "regular-maintenance",
+    name: "Regular Maintenance",
+    summary:
+      "Ongoing scheduled resets to keep your home calm and clutter-free week after week.",
+    forWho: ["Busy families", "Professionals", "Anyone who wants lasting calm"],
+    includes: [
+      "Scheduled deep clean",
+      "Maintenance declutter",
+      "System check and refresh",
+      "Flexible fortnightly or monthly",
+    ],
+    excludes: ["Initial full reset (book separately)"],
+    time: "2-3 hours per visit",
+    addons: ["Seasonal deep reset", "Pantry restock check"],
+  },
+];

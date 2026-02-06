@@ -21,20 +21,20 @@
 }
 
 .filter:hover {
-  border-color: var(--color-jade);
-  color: var(--color-jade);
-  background: rgba(26, 138, 125, 0.04);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(8, 145, 178, 0.04);
   transform: translateY(-1px);
 }
 
 .active {
-  background: var(--color-jade);
+  background: var(--color-primary);
   color: var(--color-white);
   border-color: transparent;
 }
 
 .active:hover {
-  background: var(--color-jade-dark);
+  background: var(--color-primary-dark);
   color: var(--color-white);
   border-color: transparent;
 }

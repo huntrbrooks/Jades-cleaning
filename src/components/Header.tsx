@@ -48,11 +48,11 @@ export function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <Button href={siteConfig.links.consult} variant="ghost" size="sm">
-            {siteConfig.ctas.consult}
-          </Button>
+          <a href={`tel:${siteConfig.phone.dial}`} className={styles.phoneLink}>
+            CALL {siteConfig.phone.display}
+          </a>
           <Button href={siteConfig.links.booking} size="sm">
-            Book a Reset
+            BOOK NOW
           </Button>
         </div>
 

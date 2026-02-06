@@ -24,13 +24,13 @@
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem;
-  background: var(--color-jade-light);
-  color: var(--color-jade);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .sticky a:hover {
-  background: rgba(26, 138, 125, 0.18);
+  background: rgba(8, 145, 178, 0.18);
 }
 
 .sticky a:active {
@@ -38,12 +38,12 @@
 }
 
 .book {
-  background: var(--color-jade) !important;
+  background: var(--color-primary) !important;
   color: var(--color-white) !important;
 }
 
 .book:hover {
-  background: var(--color-jade-dark) !important;
+  background: var(--color-primary-dark) !important;
 }
 
 @media (max-width: 700px) {

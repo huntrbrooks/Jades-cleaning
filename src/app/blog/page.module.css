@@ -21,7 +21,7 @@
 .card:hover {
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-4px);
-  border-color: rgba(26, 138, 125, 0.2);
+  border-color: rgba(8, 145, 178, 0.2);
 }
 
 .card h2 {

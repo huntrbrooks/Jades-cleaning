@@ -1,17 +1,22 @@
 :root {
-  /* ── Refreshed palette ─────────────────────────────── */
-  --color-jade: #1a8a7d;
-  --color-jade-dark: #147268;
-  --color-jade-light: #e6f5f3;
+  /* ── Teal / Turquoise palette ─────────────────────────── */
+  --color-primary: #0891b2;
+  --color-primary-dark: #0e7490;
+  --color-primary-light: #e0f7fa;
   --color-off-white: #fafaf8;
   --color-charcoal: #1d1d1f;
   --color-beige: #f0ece4;
   --color-gold: #d6b45a;
-  --color-aqua: #cdf0ee;
+  --color-aqua: #b2ebf2;
   --color-white: #ffffff;
   --color-muted: #636366;
   --color-border: rgba(29, 29, 31, 0.1);
   --color-shadow: rgba(29, 29, 31, 0.08);
+
+  /* ── Backwards compat aliases ─────────────────────────── */
+  --color-jade: var(--color-primary);
+  --color-jade-dark: var(--color-primary-dark);
+  --color-jade-light: var(--color-primary-light);
 
   /* ── Layout ────────────────────────────────────────── */
   --max-width: 1200px;
@@ -108,7 +113,7 @@ main {
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
-  color: var(--color-jade);
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -123,15 +128,15 @@ main {
   gap: 8px;
   padding: 8px 16px;
   border-radius: 999px;
-  background: var(--color-jade-light);
-  color: var(--color-jade);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 0.85rem;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .badge:hover {
-  background: rgba(26, 138, 125, 0.18);
+  background: rgba(8, 145, 178, 0.18);
   transform: translateY(-1px);
 }
 
@@ -146,7 +151,7 @@ main {
 .card:hover {
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-3px);
-  border-color: rgba(26, 138, 125, 0.2);
+  border-color: rgba(8, 145, 178, 0.2);
 }
 
 .grid {
