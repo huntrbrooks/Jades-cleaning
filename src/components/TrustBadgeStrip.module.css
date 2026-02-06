@@ -1,0 +1,17 @@
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(27, 127, 121, 0.12);
+  color: var(--color-jade);
+  font-weight: 600;
+  font-size: 0.85rem;
+}

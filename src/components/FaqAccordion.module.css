@@ -1,0 +1,27 @@
+.accordion {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.item {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid rgba(46, 46, 46, 0.08);
+  box-shadow: 0 10px 20px rgba(46, 46, 46, 0.04);
+}
+
+.item summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.item p {
+  margin-top: var(--space-sm);
+  color: var(--color-muted);
+}
+
+.item[open] {
+  border-color: rgba(27, 127, 121, 0.4);
+}

@@ -1,0 +1,12 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F9F7F3"/>
+  <rect x="80" y="80" width="1040" height="640" rx="40" fill="#FFFFFF" stroke="#BEE9E8" stroke-width="6"/>
+  <g fill="#1B7F79">
+    <rect x="140" y="160" width="320" height="36" rx="18"/>
+    <rect x="140" y="220" width="460" height="24" rx="12" opacity="0.75"/>
+    <rect x="140" y="260" width="420" height="24" rx="12" opacity="0.6"/>
+  </g>
+  <circle cx="980" cy="280" r="120" fill="#1B7F79" opacity="0.18"/>
+  <text x="140" y="430" font-family="Arial, sans-serif" font-size="72" fill="#1B7F79">After</text>
+  <text x="140" y="500" font-family="Arial, sans-serif" font-size="28" fill="#4B4B4B">Calm, organised, and reset.</text>
+</svg>

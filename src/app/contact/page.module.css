@@ -1,0 +1,60 @@
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.formCard,
+.bookingCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  border: 1px solid rgba(46, 46, 46, 0.08);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.form {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(46, 46, 46, 0.2);
+  background: #fff;
+}
+
+.formNote {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.contactDetails {
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.contactDetails h3 {
+  margin-top: var(--space-lg);
+  font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

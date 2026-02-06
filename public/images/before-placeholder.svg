@@ -1,0 +1,12 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#E8E0D3"/>
+  <rect x="80" y="80" width="1040" height="640" rx="40" fill="#F9F7F3" stroke="#C9BFAF" stroke-width="6"/>
+  <g fill="#9A8F7B">
+    <rect x="140" y="160" width="340" height="36" rx="18"/>
+    <rect x="140" y="220" width="520" height="24" rx="12"/>
+    <rect x="140" y="260" width="460" height="24" rx="12"/>
+  </g>
+  <circle cx="980" cy="280" r="120" fill="#D6B45A" opacity="0.28"/>
+  <text x="140" y="430" font-family="Arial, sans-serif" font-size="72" fill="#6B5F4D">Before</text>
+  <text x="140" y="500" font-family="Arial, sans-serif" font-size="28" fill="#8A7E6C">Cluttered, busy, and overwhelming.</text>
+</svg>

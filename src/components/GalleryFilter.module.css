@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(46, 46, 46, 0.2);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.active {
+  background: var(--color-jade);
+  color: var(--color-white);
+  border-color: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-2xl);
+}
