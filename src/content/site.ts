@@ -96,6 +96,22 @@ export type BlogPost = {
   slug: string;
 };
 
+export type HomeAnchorNavItem = {
+  label: string;
+  href: string;
+};
+
+export type HomeContactCard = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  highlights: string[];
+  primaryLabel: string;
+  primaryHref: string;
+  secondaryLabel: string;
+  secondaryHref: string;
+};
+
 export const siteConfig: SiteConfig = {
   name: "Total Reset Services",
   tagline: "Your home, totally reset.",
@@ -177,6 +193,29 @@ export const heroTrustBadges = [
   siteConfig.stats.local,
   siteConfig.stats.satisfaction,
 ];
+
+export const homeAnchorNav: HomeAnchorNavItem[] = [
+  { label: "Proof", href: "#proof" },
+  { label: "Services", href: "#services" },
+  { label: "Packages", href: "#packages" },
+  { label: "Contact", href: "#contact" },
+];
+
+export const homeContactCard: HomeContactCard = {
+  eyebrow: "Ready for your reset?",
+  title: "Start with a calm, clear next step.",
+  description:
+    "Tell us what feels overwhelming and we will map the best reset plan for your home.",
+  highlights: [
+    "Response within one business day",
+    "Judgment-free consult and clear pricing",
+    "Flexible scheduling across inner Melbourne",
+  ],
+  primaryLabel: "Get My Quote",
+  primaryHref: "/contact",
+  secondaryLabel: "Book a Reset Consult",
+  secondaryHref: siteConfig.links.booking,
+};
 
 export const services: Service[] = [
   {

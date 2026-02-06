@@ -46,6 +46,11 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 108px;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-charcoal);
