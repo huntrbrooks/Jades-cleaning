@@ -1,22 +1,36 @@
+/* ── Hero section ─────────────────────────────────────── */
 .heroSection {
   position: relative;
   overflow: hidden;
   padding: var(--space-4xl) 0 var(--space-3xl);
   background:
-    radial-gradient(700px 400px at 85% 0%, rgba(190, 233, 232, 0.55), transparent 65%),
-    linear-gradient(180deg, #ffffff 0%, #f5f4f0 100%);
+    radial-gradient(800px 450px at 80% 0%, rgba(205, 240, 238, 0.5), transparent 60%),
+    radial-gradient(500px 350px at 15% 90%, rgba(230, 245, 243, 0.4), transparent 60%),
+    linear-gradient(175deg, #ffffff 0%, var(--color-off-white) 100%);
 }
 
 .heroSection::before {
   content: "";
   position: absolute;
-  width: 360px;
-  height: 360px;
+  width: 420px;
+  height: 420px;
   border-radius: 999px;
-  top: -170px;
-  left: -120px;
-  background: rgba(27, 127, 121, 0.09);
-  filter: blur(8px);
+  top: -200px;
+  left: -140px;
+  background: rgba(26, 138, 125, 0.07);
+  filter: blur(60px);
+}
+
+.heroSection::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 999px;
+  bottom: -100px;
+  right: -60px;
+  background: rgba(26, 138, 125, 0.05);
+  filter: blur(50px);
 }
 
 .heroLayout {
@@ -26,15 +40,17 @@
   gap: var(--space-2xl);
 }
 
+/* ── Anchor nav pill bar ─────────────────────────────── */
 .anchorNav {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 6px;
-  border: 1px solid rgba(46, 46, 46, 0.12);
+  gap: 4px;
+  border: 1px solid var(--color-border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(6px);
-  padding: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px;
   width: fit-content;
 }
 
@@ -42,17 +58,22 @@
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  padding: 9px 14px;
+  padding: 9px 16px;
   font-size: 0.86rem;
   font-weight: 600;
-  color: var(--color-charcoal);
-  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  color: var(--color-muted);
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .anchorLink:hover {
   color: var(--color-jade);
-  background: rgba(27, 127, 121, 0.1);
+  background: var(--color-jade-light);
   transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(26, 138, 125, 0.1);
 }
 
 .anchorLink:focus-visible {
@@ -60,6 +81,7 @@
   outline-offset: 2px;
 }
 
+/* ── Hero grid ───────────────────────────────────────── */
 .heroGrid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
@@ -75,14 +97,16 @@
   font-family: var(--font-heading);
   font-size: clamp(2.7rem, 4.3vw, 4.25rem);
   line-height: 1.03;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin: var(--space-xs) 0 var(--space-lg);
+  color: var(--color-charcoal);
 }
 
 .heroSubtitle {
   color: var(--color-muted);
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
-  max-width: 56ch;
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  max-width: 54ch;
+  line-height: 1.7;
 }
 
 .heroActions {
@@ -92,6 +116,7 @@
   gap: var(--space-md);
 }
 
+/* ── Trust badges ────────────────────────────────────── */
 .badgeList {
   list-style: none;
   margin-top: var(--space-xl);
@@ -102,25 +127,36 @@
 
 .badge {
   border-radius: 999px;
-  padding: 8px 14px;
-  background: rgba(27, 127, 121, 0.11);
+  padding: 8px 15px;
+  background: var(--color-jade-light);
   color: var(--color-jade);
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.badge:hover {
+  background: rgba(26, 138, 125, 0.16);
+  transform: translateY(-1px);
+}
+
+/* ── Hero image ──────────────────────────────────────── */
 .heroVisual {
   position: relative;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  border: 1px solid rgba(46, 46, 46, 0.09);
-  box-shadow: 0 25px 45px rgba(46, 46, 46, 0.16);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(29, 29, 31, 0.06);
+  box-shadow:
+    0 4px 12px rgba(29, 29, 31, 0.06),
+    0 24px 48px rgba(29, 29, 31, 0.12);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
 }
 
 .heroVisual:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 30px 55px rgba(46, 46, 46, 0.2);
+  transform: translateY(-6px) scale(1.005);
+  box-shadow:
+    0 6px 16px rgba(29, 29, 31, 0.08),
+    0 32px 60px rgba(29, 29, 31, 0.16);
 }
 
 .heroVisual img {
@@ -128,23 +164,34 @@
   height: 100%;
   min-height: 520px;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.heroVisual:hover img {
+  transform: scale(1.03);
 }
 
 .heroVisualCard {
   position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(46, 46, 46, 0.12);
-  backdrop-filter: blur(4px);
-  box-shadow: 0 14px 30px rgba(46, 46, 46, 0.14);
-  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(29, 29, 31, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(29, 29, 31, 0.1);
+  padding: 14px 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-md);
+  transition: transform 0.3s ease;
+}
+
+.heroVisual:hover .heroVisualCard {
+  transform: translateY(-2px);
 }
 
 .heroVisualCard p {
@@ -158,6 +205,13 @@
   font-size: 0.9rem;
   text-decoration: underline;
   text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
+}
+
+.heroVisualCard a:hover {
+  color: var(--color-jade-dark);
+  text-decoration-thickness: 2px;
 }
 
 .heroVisualCard a:focus-visible {
@@ -166,14 +220,15 @@
   border-radius: 6px;
 }
 
+/* ── Section variants ────────────────────────────────── */
 .sectionBand {
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .sectionSoft {
   background:
-    radial-gradient(500px 300px at 10% 10%, rgba(190, 233, 232, 0.3), transparent 68%),
-    #f8f7f2;
+    radial-gradient(500px 300px at 8% 8%, rgba(205, 240, 238, 0.3), transparent 65%),
+    var(--color-off-white);
 }
 
 .sectionHeader {
@@ -189,6 +244,7 @@
   line-height: 1.1;
 }
 
+/* ── Card grids ──────────────────────────────────────── */
 .proofGrid,
 .servicesGrid,
 .packagesGrid {
@@ -201,20 +257,24 @@
 .serviceCard,
 .packageCard {
   background: var(--color-white);
-  border: 1px solid rgba(46, 46, 46, 0.08);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 10px 24px rgba(46, 46, 46, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .proofCard:hover,
 .serviceCard:hover,
 .packageCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(46, 46, 46, 0.13);
-  border-color: rgba(27, 127, 121, 0.35);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(26, 138, 125, 0.25);
 }
 
+/* ── Proof cards ─────────────────────────────────────── */
 .proofCard {
   padding: var(--space-xl);
 }
@@ -239,6 +299,7 @@
   color: var(--color-muted);
 }
 
+/* ── Service cards ───────────────────────────────────── */
 .serviceCard {
   padding: var(--space-xl);
   display: grid;
@@ -263,7 +324,7 @@
 .serviceCard li {
   font-size: 0.95rem;
   position: relative;
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .serviceCard li::before {
@@ -280,9 +341,10 @@
 .serviceCard span {
   font-weight: 700;
   font-size: 0.9rem;
-  color: rgba(46, 46, 46, 0.82);
+  color: var(--color-muted);
 }
 
+/* ── Text links ──────────────────────────────────────── */
 .sectionAction {
   margin-top: var(--space-xl);
 }
@@ -293,12 +355,16 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 5px;
-  transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
+  transition:
+    color 0.2s ease,
+    text-decoration-thickness 0.2s ease,
+    text-underline-offset 0.2s ease;
 }
 
 .textLink:hover {
-  color: #146661;
+  color: var(--color-jade-dark);
   text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 .textLink:focus-visible {
@@ -307,6 +373,7 @@
   border-radius: 6px;
 }
 
+/* ── Package cards ───────────────────────────────────── */
 .packageCard {
   padding: var(--space-xl);
   display: grid;
@@ -314,10 +381,13 @@
 }
 
 .packageFeatured {
-  border-color: rgba(27, 127, 121, 0.36);
+  border-color: rgba(26, 138, 125, 0.3);
   background:
-    linear-gradient(180deg, rgba(190, 233, 232, 0.22), rgba(255, 255, 255, 0.95)),
+    linear-gradient(175deg, rgba(205, 240, 238, 0.2), rgba(255, 255, 255, 0.98)),
     var(--color-white);
+  box-shadow:
+    0 2px 8px rgba(26, 138, 125, 0.06),
+    0 16px 36px rgba(26, 138, 125, 0.1);
 }
 
 .packageMeta {
@@ -326,7 +396,7 @@
   gap: var(--space-sm);
   font-size: 0.86rem;
   font-weight: 700;
-  color: rgba(46, 46, 46, 0.74);
+  color: var(--color-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -348,7 +418,7 @@
 
 .packageCard li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .packageCard li::before {
@@ -362,18 +432,20 @@
   background: var(--color-jade);
 }
 
+/* ── Contact section ─────────────────────────────────── */
 .contactSection {
   background:
-    linear-gradient(180deg, #f1eee8 0%, #ebe7df 100%);
+    linear-gradient(180deg, var(--color-beige) 0%, #e8e3d9 100%);
 }
 
 .contactCard {
   border-radius: var(--radius-xl);
-  padding: clamp(24px, 4vw, 44px);
-  border: 1px solid rgba(46, 46, 46, 0.12);
-  background: rgba(255, 255, 255, 0.86);
-  backdrop-filter: blur(3px);
-  box-shadow: 0 20px 42px rgba(46, 46, 46, 0.12);
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-soft);
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   gap: var(--space-2xl);
@@ -427,13 +499,18 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: rgba(46, 46, 46, 0.82);
+  color: var(--color-muted);
   font-size: 0.92rem;
 }
 
 .contactMeta a {
   text-decoration: underline;
   text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.contactMeta a:hover {
+  color: var(--color-jade);
 }
 
 .contactMeta a:focus-visible {
@@ -444,8 +521,8 @@
 
 .contactPanel {
   border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(27, 127, 121, 0.14), rgba(27, 127, 121, 0.07));
-  border: 1px solid rgba(27, 127, 121, 0.26);
+  background: linear-gradient(175deg, rgba(26, 138, 125, 0.12), rgba(26, 138, 125, 0.05));
+  border: 1px solid rgba(26, 138, 125, 0.2);
   padding: var(--space-xl);
   display: grid;
   align-content: start;
@@ -454,7 +531,7 @@
 
 .contactPanel p {
   font-weight: 700;
-  color: rgba(46, 46, 46, 0.88);
+  color: var(--color-charcoal);
 }
 
 .contactPanel a {
@@ -462,10 +539,13 @@
   color: var(--color-jade);
   text-decoration: underline;
   text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
 }
 
 .contactPanel a:hover {
-  color: #146661;
+  color: var(--color-jade-dark);
+  text-decoration-thickness: 2px;
 }
 
 .contactPanel a:focus-visible {
@@ -474,6 +554,7 @@
   border-radius: 6px;
 }
 
+/* ── Responsive ──────────────────────────────────────── */
 @media (max-width: 1080px) {
   .heroGrid,
   .contactCard {

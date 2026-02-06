@@ -6,20 +6,35 @@
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
 .filter {
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(46, 46, 46, 0.2);
+  border: 1px solid rgba(29, 29, 31, 0.15);
   background: transparent;
   cursor: pointer;
   font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.filter:hover {
+  border-color: var(--color-jade);
+  color: var(--color-jade);
+  background: rgba(26, 138, 125, 0.04);
+  transform: translateY(-1px);
 }
 
 .active {
   background: var(--color-jade);
+  color: var(--color-white);
+  border-color: transparent;
+}
+
+.active:hover {
+  background: var(--color-jade-dark);
   color: var(--color-white);
   border-color: transparent;
 }

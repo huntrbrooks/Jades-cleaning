@@ -4,28 +4,46 @@
   left: 16px;
   right: 16px;
   display: none;
-  gap: 12px;
-  background: var(--color-white);
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 999px;
-  padding: 10px;
-  box-shadow: 0 16px 40px rgba(46, 46, 46, 0.2);
+  padding: 8px;
+  box-shadow:
+    0 4px 12px rgba(29, 29, 31, 0.08),
+    0 16px 40px rgba(29, 29, 31, 0.16);
   z-index: 60;
-  border: 1px solid rgba(46, 46, 46, 0.1);
+  border: 1px solid var(--color-border);
 }
 
 .sticky a {
   flex: 1;
   text-align: center;
-  padding: 10px 0;
+  padding: 11px 0;
   border-radius: 999px;
   font-weight: 600;
-  background: rgba(27, 127, 121, 0.08);
+  font-size: 0.9rem;
+  background: var(--color-jade-light);
   color: var(--color-jade);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sticky a:hover {
+  background: rgba(26, 138, 125, 0.18);
+}
+
+.sticky a:active {
+  transform: scale(0.97);
 }
 
 .book {
-  background: var(--color-jade);
-  color: var(--color-white);
+  background: var(--color-jade) !important;
+  color: var(--color-white) !important;
+}
+
+.book:hover {
+  background: var(--color-jade-dark) !important;
 }
 
 @media (max-width: 700px) {

@@ -31,8 +31,14 @@
 .pageImage {
   border-radius: var(--radius-xl);
   overflow: hidden;
-  border: 1px solid rgba(46, 46, 46, 0.08);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-soft);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pageImage:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 64px rgba(29, 29, 31, 0.14);
 }
 
 .sectionTitle {
@@ -63,8 +69,15 @@
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
   background: var(--color-white);
-  border: 1px solid rgba(46, 46, 46, 0.06);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.infoCard:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+  border-color: rgba(26, 138, 125, 0.15);
 }
 
 .infoCard h3 {
@@ -82,8 +95,9 @@
 .note {
   padding: var(--space-lg);
   border-radius: var(--radius-md);
-  background: rgba(27, 127, 121, 0.08);
+  background: var(--color-jade-light);
   color: var(--color-charcoal);
+  border: 1px solid rgba(26, 138, 125, 0.1);
 }
 
 .split {

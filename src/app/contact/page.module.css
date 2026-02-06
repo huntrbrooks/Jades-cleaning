@@ -10,10 +10,16 @@
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
-  border: 1px solid rgba(46, 46, 46, 0.08);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
   display: grid;
   gap: var(--space-lg);
+  transition: box-shadow 0.3s ease;
+}
+
+.formCard:hover,
+.bookingCard:hover {
+  box-shadow: var(--shadow-card-hover);
 }
 
 .form {
@@ -31,10 +37,25 @@
 .form input,
 .form select,
 .form textarea {
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(46, 46, 46, 0.2);
-  background: #fff;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(29, 29, 31, 0.15);
+  background: var(--color-white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form input:hover,
+.form select:hover,
+.form textarea:hover {
+  border-color: rgba(29, 29, 31, 0.3);
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--color-jade);
+  box-shadow: 0 0 0 3px rgba(26, 138, 125, 0.12);
 }
 
 .formNote {
@@ -51,6 +72,14 @@
 .contactDetails h3 {
   margin-top: var(--space-lg);
   font-size: 1rem;
+}
+
+.contactDetails a {
+  transition: color 0.2s ease;
+}
+
+.contactDetails a:hover {
+  color: var(--color-jade);
 }
 
 @media (max-width: 960px) {
